@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-UO-Dfm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-uh-E19" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="221"/>
@@ -152,13 +152,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="leading" secondItem="MdY-AS-bxz" secondAttribute="leading" id="0lH-e2-ohc"/>
-                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="trailing" secondItem="2gQ-oA-ao4" secondAttribute="trailing" id="5Ij-gm-oQd"/>
-                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="bottom" secondItem="2gQ-oA-ao4" secondAttribute="bottom" id="HtR-p1-z61"/>
+                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="leading" secondItem="MdY-AS-bxz" secondAttribute="leading" id="IYz-jr-dx7"/>
                             <constraint firstItem="uHt-uh-E19" firstAttribute="top" secondItem="2gQ-oA-ao4" secondAttribute="top" id="IeK-sD-Pfv"/>
                             <constraint firstItem="uHt-uh-E19" firstAttribute="leading" secondItem="2gQ-oA-ao4" secondAttribute="leading" id="KNz-VB-1Md"/>
                             <constraint firstItem="2gQ-oA-ao4" firstAttribute="trailing" secondItem="uHt-uh-E19" secondAttribute="trailing" id="XzJ-xi-rC6"/>
-                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="top" secondItem="2gQ-oA-ao4" secondAttribute="top" id="xNi-ts-yXd"/>
+                            <constraint firstAttribute="trailing" secondItem="HNJ-UO-Dfm" secondAttribute="trailing" id="d3k-Ic-tbJ"/>
+                            <constraint firstAttribute="bottom" secondItem="HNJ-UO-Dfm" secondAttribute="bottom" id="ixi-ng-fdH"/>
+                            <constraint firstItem="HNJ-UO-Dfm" firstAttribute="top" secondItem="MdY-AS-bxz" secondAttribute="top" id="yVt-CG-jQx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2gQ-oA-ao4"/>
                     </view>

@@ -14,9 +14,13 @@
 		EF623867200EFD8600D1B054 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF623866200EFD8600D1B054 /* WeatherDataModel.swift */; };
 		EF623869200EFDD100D1B054 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF623868200EFDD100D1B054 /* ChangeCityViewController.swift */; };
 		EF6238A420104D6F00D1B054 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6238A320104D6F00D1B054 /* Launch Screen.storyboard */; };
+		F02127F6EFC8194B86E352B5 /* Pods_ClimaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D81A445BF44920C2C909D8 /* Pods_ClimaApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22D81A445BF44920C2C909D8 /* Pods_ClimaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E2C0E0B8E08DF4783D8C1C /* Pods-ClimaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EA131AC3797B8C0AB94257E6 /* Pods-ClimaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp.release.xcconfig"; sourceTree = "<group>"; };
 		EF62384E200EFD3B00D1B054 /* ClimaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF623851200EFD3B00D1B054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF623853200EFD3B00D1B054 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02127F6EFC8194B86E352B5 /* Pods_ClimaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CB4CEBDD672865BC09518A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22D81A445BF44920C2C909D8 /* Pods_ClimaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09443D2CA938EC512B93F2AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E2C0E0B8E08DF4783D8C1C /* Pods-ClimaApp.debug.xcconfig */,
+				EA131AC3797B8C0AB94257E6 /* Pods-ClimaApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF623845200EFD3B00D1B054 = {
 			isa = PBXGroup;
 			children = (
 				EF623850200EFD3B00D1B054 /* ClimaApp */,
 				EF62384F200EFD3B00D1B054 /* Products */,
+				09443D2CA938EC512B93F2AE /* Pods */,
+				00CB4CEBDD672865BC09518A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF623860200EFD3B00D1B054 /* Build configuration list for PBXNativeTarget "ClimaApp" */;
 			buildPhases = (
+				653D454C320F3FFE4EFAA2F6 /* [CP] Check Pods Manifest.lock */,
 				EF62384A200EFD3B00D1B054 /* Sources */,
 				EF62384B200EFD3B00D1B054 /* Frameworks */,
 				EF62384C200EFD3B00D1B054 /* Resources */,
+				19E47838BC6D1117F200B3BC /* [CP] Embed Pods Frameworks */,
+				6BC21AAABBFDD9FFDBC1CC83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19E47838BC6D1117F200B3BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		653D454C320F3FFE4EFAA2F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClimaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BC21AAABBFDD9FFDBC1CC83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF62384A200EFD3B00D1B054 /* Sources */ = {
@@ -304,6 +389,7 @@
 		};
 		EF623861200EFD3B00D1B054 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E2C0E0B8E08DF4783D8C1C /* Pods-ClimaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +405,7 @@
 		};
 		EF623862200EFD3B00D1B054 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA131AC3797B8C0AB94257E6 /* Pods-ClimaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
