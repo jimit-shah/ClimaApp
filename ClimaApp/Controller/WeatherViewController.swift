@@ -16,7 +16,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
   //Constants
   let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
   let APP_ID = "1b3b610f426c50a7f5409ca63cfc8cf7"
-  let UNITS = "imperial"
+  let UNITS = "kelvin"
+  var temp: Int?
   
   //Declare instance variables here
   let locationManager = CLLocationManager()
@@ -27,7 +28,29 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
   @IBOutlet weak var weatherIcon: UIImageView!
   @IBOutlet weak var cityLabel: UILabel!
   @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak var isFahrenheit: UISwitch!
+  @IBOutlet weak var degreeLabel: UILabel!
   
+  //Actions
+  @IBAction func tempSwitch(_ sender: UISwitch) {
+    updateTemp()
+  }
+  
+  func updateTemp() {
+    if isFahrenheit.isOn {
+      degreeLabel.text = "℉"
+      temp = Int(weatherDataModel.temprature * 9/5 - 459.67)
+      if let temp = temp {
+        temperatureLabel.text = "\(temp)°"
+      }
+    } else {
+      degreeLabel.text = "℃"
+      temp = Int(weatherDataModel.temprature - 273.15)
+      if let temp = temp {
+        temperatureLabel.text = "\(temp)°"
+      }
+    }
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -69,8 +92,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
   func updateWeatherData(json: JSON) {
     
     if let tempResult = json["main"]["temp"].double {
-      //weatherDataModel.temprature = Int((tempResult * 9/5) - 459.67) // substract 459.67 to convert Kelvin -> Fahrenheit
-      weatherDataModel.temprature = Int(tempResult)
+
+      weatherDataModel.temprature = tempResult // keep it as Kelvin
       weatherDataModel.city = json["name"].stringValue
       weatherDataModel.condition = json["weather"][0]["id"].intValue
       weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
@@ -89,7 +112,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
   
   func updateUIWithWeatherData() {
     cityLabel.text = weatherDataModel.city
-    temperatureLabel.text = "\(weatherDataModel.temprature)°"
+    //    temperatureLabel.text = "\(temp!)°"
+    updateTemp()
     weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
   }
   
