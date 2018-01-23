@@ -111,13 +111,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-uh-E19" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="221"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue6-O3-i3I" userLabel="Back Button">
-                                        <rect key="frame" x="8" y="8" width="32" height="32"/>
-                                        <state key="normal" image="left"/>
-                                        <connections>
-                                            <action selector="backButtonPressed:" destination="b0f-Nm-dtA" eventType="touchUpInside" id="0V4-j7-lpi"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-hW-v0K">
                                         <rect key="frame" x="95" y="160" width="184" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -138,15 +131,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue6-O3-i3I" userLabel="Back Button">
+                                        <rect key="frame" x="16" y="8" width="32" height="32"/>
+                                        <state key="normal" image="left"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="b0f-Nm-dtA" eventType="touchUpInside" id="0V4-j7-lpi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="ue6-O3-i3I" firstAttribute="leading" secondItem="uHt-uh-E19" secondAttribute="leading" constant="16" id="5R8-iu-tuT"/>
                                     <constraint firstItem="NUx-hW-v0K" firstAttribute="centerX" secondItem="uHt-uh-E19" secondAttribute="centerX" id="9vH-bC-oDf"/>
                                     <constraint firstAttribute="height" constant="221" id="FlV-kh-haQ"/>
                                     <constraint firstItem="64M-BO-vkf" firstAttribute="centerX" secondItem="uHt-uh-E19" secondAttribute="centerX" id="FoH-QQ-NSQ"/>
                                     <constraint firstAttribute="bottom" secondItem="NUx-hW-v0K" secondAttribute="bottom" constant="8" id="KJN-UU-8xJ"/>
-                                    <constraint firstItem="ue6-O3-i3I" firstAttribute="top" secondItem="uHt-uh-E19" secondAttribute="top" constant="8" id="KWM-rX-e9H"/>
                                     <constraint firstItem="NUx-hW-v0K" firstAttribute="top" secondItem="64M-BO-vkf" secondAttribute="bottom" constant="8" id="h89-Jr-yAh"/>
-                                    <constraint firstItem="ue6-O3-i3I" firstAttribute="leading" secondItem="uHt-uh-E19" secondAttribute="leading" constant="8" id="xtM-GM-sHc"/>
+                                    <constraint firstItem="ue6-O3-i3I" firstAttribute="top" secondItem="uHt-uh-E19" secondAttribute="top" constant="8" id="n5e-M1-Wr4"/>
                                 </constraints>
                             </view>
                         </subviews>
